@@ -67,7 +67,7 @@ margin-right: 8px;
 	height: 10px;
     background-color: #cccccc;
 	margin-top: 12px;
-    margin-left: 8px;
+    margin-left: 5px;
     margin-right: 5px;
 }
 /* 京东商城顶部导航结束 */
@@ -86,6 +86,9 @@ margin-right: 8px;
 	position: absolute;
 	top: -30px;
 	overflow: hidden;
+	border-bottom: 1px solid #ededed;
+	box-sizing: border-box;
+	box-shadow: 0 -12px 10px rgba(0,0,0,.2);
 }
 .search-box{
 	width: 550px;
@@ -234,7 +237,7 @@ color: #f10214;
 /* 京东商城搜索框部分结束 */
 /* 京东轮播列表部分开始 */
 .mainbody{
-	width: 1349px;
+	width: 100%;
 	height: 480px;
 	/* background-color: aquamarine; */
 	margin: 0 auto;
@@ -532,10 +535,12 @@ float: left;
 /* 京东轮播列表部分结束 */
 /* 京东秒杀部分开始 */
 .seckill{
-	width: 1349px;
+	width: 100%;
 	height: 275px;
-	margin: 30px 0;
+	
 	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 .seckill-main{
 	height: 100%;
@@ -608,13 +613,14 @@ float: left;
 	
 }
 .seckill-body{
-	width: 100%;
+	width: 1000px;
     height: 100%;
 	color: #fff;
+	float: right;
 }
 .seckill-body-list{
 	width: 800px;
-    border-right: solid 1px #f0f0f0;
+    /* border-right: solid 1px #f0f0f0; */
 	height: 275px;
 	float: left;
 	position: relative;
@@ -726,19 +732,16 @@ text-overflow: ellipsis;
 	line-height: 20px;
 }
 .sk-right{
-	width: 180px;
-	height: 250px;
-	background-color: olivedrab;
-	margin-right: 10px;
-	margin-top: 8px;
+	width: 200px;
+	height: 275px;
+	background-color: #ffffff;
+	padding: 8px 10px 7px;
 	float: right;
+	box-sizing: border-box;
 }
 /* 京东秒杀部分结束 */
 /* 京东排行榜部分开始 */
-.core{
-	width: 1349px;
-	height: 480px;
-}
+
 .core-main{
 	width: 1190px;
 	height: 100%;
@@ -748,34 +751,334 @@ text-overflow: ellipsis;
 	float: left;
     width: 390px;
     height: 450px;
-    margin: 0 10px 30px 0;
+	margin: 0 10px 30px 0;
+	background: #fff;
 }
 .core-top-title{
 	width: 390px;
 	height: 60px;
 	padding: 0 20px;
-	float: left;
+	box-sizing: border-box;
+	background: #fff;
+}
+.core-top-title:hover{
+	cursor: pointer;
+}
+.core-top-title-words{
+	height: 40px;
+	padding: 10px 0 0 0;
 }
 .core-top-title h3{
 	font-size: 22px;
     color: #222;
-	line-height: 60px;
+	line-height: 40px;
 	font-weight: 400;
 	float: left;
 }
 .core-top-title i{
-	font-size: 25px;
-	line-height: 60px;
+	font-size: 28px;
 color: #f10215;
+float: left;
+line-height: 40px;
+margin-left: 3px;
+margin-right: 3px;
+
 }
 .core-top-title span{
 	font-size: 14px; 
 	color: #999;
-	line-height: 60px;
-	margin-top: -10px;
+	line-height: 40px;
+	float: left;
 }
-.core-body{
+.core-top-body{
 	width: 390px;
 	height: 355px;
 }
+.core-body-head{
+	height: 34px;
+    line-height: 34px;
+    text-align: center;
+    background: #f7f7f7;
+}
+
+.core-body-head-item{
+	float: left;
+	width: 78px;
+	line-height: 34px;
+	text-align: center;
+	color: #666;
+	font-size: 12px;
+}
+.core-body-head-item:hover{
+	cursor: pointer;
+	color: #e33333;
+}
+.core-top-body-bd{
+	width: 390px;
+	height: 321px;
+	padding: 0 20px;
+	border-bottom: 1px solid #666666;
+	box-sizing: border-box;
+	
+}
+.core-top-body-bd-item{
+	width: 350px;
+	height: 107px;
+}
+.bd-item-img{
+	float: left;
+    width: 80px;
+    height: 80px;
+    margin-top: 15px;
+}
+.bd-item-num{
+	color: #e74240;
+	float: left;
+    width: 30px;
+    height: 40px;
+    margin: 36px 0 0 10px;
+    line-height: 40px;
+    font-size: 32px;
+	text-align: center;
+	font-weight: 700;
+}
+.core-top-body-bd-item span{
+	display: block;
+    margin-left: 125px;
+    padding-top: 40px;
+    height: 32px;
+    line-height: 16px;
+    font-size: 12px;
+    overflow: hidden;
+    color: #333;
+}
+.core-top-body-bd-item:hover span{
+  color: #e74240;
+}
+.core-dailyold{
+	float: left;
+    width: 390px;
+    height: 450px;
+	margin: 0 10px 30px 0;
+	background: #fff;
+}
+.dailyold-bd{
+	width:350px;
+	height: 355px;
+	margin: 0 20px; 
+}
+dialyold-bd-img{
+	width:350px;
+	height: 128px;
+}
+.dialyold-bd-cover{
+	width: 100%;
+height: 210px;
+}
+.dialyold-bd-cover-list{
+	width: 366px;
+	height: 105px;
+	margin: 0 -8px;
+}
+.cove-list-item{
+	width: 105px;
+    height: 105px;
+    margin: 0 8px;
+	background: #fff;
+	float: left;
+}
+.cover-title{
+	height: 58px;
+    line-height: 58px;
+    font-size: 18px;
+    text-align: center;
+    color: #222;
+}
+.cover-intro{
+	font-size: 14px;
+    height: 36px;
+    line-height: 18px;
+    margin: 0 auto 0;
+    text-align: center;
+    overflow: hidden;
+    color: #666;
+}
+.core-last{
+	float: left;
+    width: 390px;
+    height: 450px;
+	margin: 0 0 30px 0;
+	background: #fff;
+}
+.last-item{
+	border-radius: 6px;
+	background: #f6f6f6;
+	height: 118px;
+}
+.last-item-img{
+	float: left;
+    margin: 14px 0 0 10px;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 50%;
+    background: #fff;
+}
+.last-item-info{
+	padding-top: 15px;
+    margin: 0 72px 0 110px;
+}
+.last-item-info-price{
+    height: 38px;
+	line-height: 38px;
+	color: #e33333;
+}
+.last-item-info-price span{
+	font-size: 16px;
+	margin-right: 3px;
+	font-weight: 400;
+	float: left;
+}
+.last-item-info-price p{
+	font-size: 34px;
+}
+.price2{
+	color: #b1b3b0;
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+}
+.price3{
+	color: #767b77;
+    font-size: 14px;
+    line-height: 24px;
+	height: 24px;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.last-item-more{
+	
+    height: 100%;
+    line-height: 118px;
+    margin-right: 34px;
+    font-size: 12px;
+	color: #333;
+	float: right;
+}
+.last-item-more span{
+	display: inline-block;
+	width: 1px;
+	line-height: 15px;
+	vertical-align: middle;
+}
 /* 京东排行榜部分结束 */
+/* 京东mime部分开始 */
+.mime-top-main{
+	width: 350px;
+    text-align: center;
+
+}
+.mime-top-main span{
+	font-size: 16px;
+    color: #333;
+    height: 50px;
+	line-height: 56px;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mime-top-main p{
+	font-size: 14px;
+    color: #999;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.mime-mid-bd{
+	width:390px;
+	height: 378px;
+	padding-top: 10px;
+	box-sizing: border-box;
+}
+.mid-bd-item{
+	float: left;
+    width: 180px;
+    height: 184px;
+    text-align: center;
+}
+.mid-bd-item-img{
+	width:110px;
+	height: 110px;
+	margin: 0 auto;
+}
+.mid-bd-item span{
+	font-size: 14px;
+    color: #3e8c96;
+    font-weight: bold;
+    height: 16px;
+    padding: 0 10px;
+    line-height: 16px;
+    margin-top: 20px;
+    white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.mid-bd-item p{
+	font-size: 12px;
+    line-height: 14px;
+    padding: 0 8px;
+    margin-top: 6px;
+    color: #666;
+    white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+}
+.mimi-last-img{
+	width: 350px;
+    height: 250px;
+    margin: 0 auto;
+}
+.mimi-last-list{
+	width: 360px;
+    margin: 10px auto 0;
+}
+.mimi-last-list-item{
+	float: left;
+    width: 110px;
+    height: 110px;
+    margin: 0 5px;
+}
+.mimi-last-body{
+	width: 390px;
+	height: 370px;
+	padding: 0 20px;
+	box-sizing: border-box;
+	
+}
+/* 京东觅me部分结束 */
+
+/* 时尚达人部分开始 */
+.fashion-title{
+    margin: 0 auto;
+	width: 1190px;
+	height: 65px;
+}
+.fashion-title h3{
+	width: 150px;
+    height: 45px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 45px;
+    padding: 0 50px;
+    margin: 0 auto 20px;
+	color: #222;
+	font-size: 400; 
+}
+.fashion-bd{
+	width: 390px;
+	height: 380px;
+}
+/* 时尚达人部分结束 */
