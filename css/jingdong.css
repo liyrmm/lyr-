@@ -47,6 +47,7 @@ body{
 	color: #999999;
 	padding-left: 7px;
 	padding-right: 7px;
+	position: relative;
 }
 .body-right-login:hover{
 	color:  #f10215;
@@ -56,6 +57,119 @@ body{
 	font-size: 14px;
 	line-height: 30px;
 	color: #999999;
+}
+.body-right-login .myjd:hover{
+	background: #fff;
+}
+.loginSlide1{
+	position: absolute;
+    border: 1px solid #ccc;
+	background-color: #fff;
+	box-shadow: 1px 2px 1px rgba(0,0,0,.1);
+	left: 0;
+	width: 280px;
+	/* height:100px; */
+	z-index: 100;
+	display: none;
+}
+.loginSlide1top{
+	height: 92px;
+	padding: 10px 0 10px 15px;
+	overflow: hidden;
+	/* box-sizing: border-box; */
+}
+.fore1{
+	float: left;
+    width: 126px;
+}
+.fore1item{
+	color:#999999;
+}
+.fore1item:hover{
+	color: #ff6700;
+}
+.loginSlide1bot{
+	border-top: solid 1px #f1f1f1;
+	padding: 10px 0 10px 15px;
+	overflow: hidden;
+	height: 69px;
+	/* box-sizing: border-box; */
+	background: #fff;
+}
+.loginSlide2{
+	left: 0;
+    width: 140px;
+	padding: 10px 0 10px 15px;
+	position: absolute;
+    border: 1px solid #ccc;
+	background-color: #fff;
+	box-shadow: 1px 2px 1px rgba(0,0,0,.1);
+	z-index: 30;
+	display: none;
+}
+.fore2{
+	float: left;
+	width:60px;
+}
+.loginSlide3{
+	right: 0;
+    width: 170px;
+	padding: 10px 0;
+	position: absolute;
+    border: 1px solid #ccc;
+	background-color: #fff;
+	box-shadow: 1px 2px 1px rgba(0,0,0,.1);
+	z-index: 40;
+	display: none;
+}
+.item-client{
+	padding-left: 15px;
+    font-weight: 700;
+    color: #666;
+}
+.item-business{
+	float: left;
+	padding-left: 15px;
+    font-weight: 700;
+	color: #666;
+	width:100%;
+	border-top: 1px dotted #eee;
+}
+.fore3item{
+	color: #999;
+	width: 70px;
+	padding-left: 15px;
+	float: left;
+}
+.fore3item:hover{
+	color: #ff6700;
+}
+.loginSlide4{
+	width: 1188px;
+	padding: 15px 0;
+	position: absolute;
+	right: -84px;
+    border: 1px solid #ccc;
+	background-color: #fff;
+	box-shadow: 1px 2px 1px rgba(0,0,0,.1);
+	z-index: 40;
+}
+.slide41{
+	border-left: none;
+	width: 340px;
+	float: left;
+	padding-left: 20px;
+}
+.loginSlide4 dt{
+	margin-bottom: 5px;
+    font-weight: 700;
+    color: #666;
+}
+.slide42{
+	float: left;
+    width: 255px;
+    padding-left: 20px;
+    border-left: 1px solid #eee;
 }
 .body-right-regist{
 	font-size: 12px;
@@ -68,7 +182,8 @@ margin-right: 8px;
     background-color: #cccccc;
 	margin-top: 12px;
     margin-left: 5px;
-    margin-right: 5px;
+	margin-right: 5px;
+	
 }
 /* 京东商城顶部导航结束 */
 /* 京东商城搜索框部分开始 */
@@ -324,20 +439,30 @@ float: left;
 position: relative;
 
 }
+.mainbody-body2-img{
+	width: 590px;
+	height:470px;
+}
 .mainbody-body2-button-left{
 	position: absolute;
-	top: 50%;
+    z-index: 1;
+    top: 50%;
     margin-top: -20px;
     width: 24px;
-	height: 40px;
-	background-color: rgba(0,0,0,.2);
-	color: hsla(0,0%,100%,.4);
+    height: 40px;
+    background-color: rgba(0,0,0,.2);
+    color: hsla(0,0%,100%,.4);
     line-height: 40px;
-    text-align: center;
+	text-align: center;
+	cursor: pointer;
 }
-.mainbody-body2-button-left.i{
-	font-size: 20px;
+.mainbody-body2-button-left：hover {
+	background-color: rgba(0,0,0)
+}
+.mainbody-body2-button-left i{
+	font-size: 24px;
 	color: hsla(0,0%,100%,.4);
+	text-align: center;
 }
 .mainbody-body2-button-right{
 position: absolute;
@@ -351,8 +476,8 @@ top: 50%;
     line-height: 40px;
     text-align: center;
 }
-.mainbody-body2-button-right.i{
-	font-size: 20px;
+.mainbody-body2-button-right i{
+	font-size: 24px;
 	color: hsla(0,0%,100%,.4);
 }
 .mainbody-body2-dots{
@@ -363,9 +488,15 @@ top: 50%;
 	height: 18px;
 }
 .mainbody-body2-dot{
-	width: 18px;
-	height: 18px;
+	width: 10px;
+	height: 10px;
 	border-radius: 50%;
+	background: #fff;
+	margin-right: 1px;
+	float: left;
+	
+	border:2px solid #b9beba;
+	border-color: hsla(0,0%,100%,.4);
 }
 .mainbody-body3{
 	width: 190px;
@@ -727,7 +858,9 @@ top: 50%;
 	top: 0;
 	bottom: 0;
 	margin: auto 0;
-    font-size: 20px;
+}
+.sk-buttonl i{
+	font-size: 20px;
 }
 .sk-buttonr{
 	width: 20px;
@@ -739,7 +872,9 @@ top: 50%;
 	bottom: 0;
 	right: 0;
 	margin: auto 0;
-    font-size: 20px;
+}
+.sk-buttonr i{
+	font-size: 24px;
 }
 .sk-list-item{
 	width: 200px;
@@ -832,6 +967,24 @@ text-overflow: ellipsis;
 	padding: 8px 10px 7px;
 	float: right;
 	box-sizing: border-box;
+	position: relative;
+}
+.sk-right-dots{
+	position: absolute;
+	bottom: 16px;
+    left: 50%;
+    font-size: 0;
+	text-align: center;
+	margin-left: -14px;
+}
+.sk-right-dot{
+	background: #c0c0c0;
+    width: 6px;
+    height: 6px;
+	margin: 4px;
+	border-radius: 50%;
+	float: left;
+	
 }
 /* 京东秒杀部分结束 */
 /* 京东排行榜部分开始 */
@@ -1831,7 +1984,7 @@ footer{
     height: 42px;
 	background-repeat: no-repeat;
     background-position: 0 -192px;
-    background-image: url(//misc.360buyimg.com/mtd/pc/index_2017/2.1.0/static/images/sprite.footer.png);
+    background-image: url(../imgs/sprite.footer.png);
 }
 .service-unit h5.kuai{
 	background-position: -41px -192px;
@@ -1872,7 +2025,7 @@ footer{
     float: right;
     width: 200px;
     height: 150px;
-    background-image: url(../img/sprite.footer.png);
+    background-image: url(../imgs/sprite.footer.png);
 }
 .cover h5{
 	margin-bottom: 15px;
@@ -1954,7 +2107,7 @@ footer{
 	height: 12px;
 	background-repeat: no-repeat;
 	background-position: -108px -155px;
-	background-image: url(../img/sprite.footer.png);
+	background-image: url(../imgs/sprite.footer.png);
 }
 .wushi .pipi{
     color: #999;
@@ -1975,6 +2128,6 @@ footer{
     height: 32px;
 	background-repeat: no-repeat;
     background-position: -205px -111px;
-    background-image: url(../img/sprite.footer.png);
+    background-image: url(../imgs/sprite.footer.png);
 }
 /* footer结束 */
