@@ -7,7 +7,15 @@
   url('http://at.alicdn.com/t/font_1058725_8aktnyvcrch.ttf') format('truetype'),
   url('http://at.alicdn.com/t/font_1058725_8aktnyvcrch.svg#iconfont') format('svg');
 }
-
+@font-face {
+  font-family: 'iconfont';  /* project id 1058725 */
+  src: url('//at.alicdn.com/t/font_1058725_8aktnyvcrch.eot');
+  src: url('//at.alicdn.com/t/font_1058725_8aktnyvcrch.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1058725_8aktnyvcrch.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1058725_8aktnyvcrch.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1058725_8aktnyvcrch.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1058725_8aktnyvcrch.svg#iconfont') format('svg');
+}
   .iconfont{
     font-family:"iconfont" !important;
     font-size:14px;font-style:normal;
