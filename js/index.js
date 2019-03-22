@@ -129,6 +129,7 @@ window.onload = function () {
                 item.classList.remove("active")
             })
             pages[i].classList.add("active")
+            index=i;
         }
     })
 
@@ -137,7 +138,7 @@ window.onload = function () {
     // 京东秒杀右边无缝轮播
     let index1 = 0
     let page = document.querySelectorAll(".sk-right-imgs a")
-    let bigpage = document.querySelector(".sk-right-imgs")
+    let bigpage = document.querySelector(".sk-right")
     let dot = document.querySelectorAll(".sk-right-dot")
     let prev = 0;
     let now = 0;
@@ -190,6 +191,9 @@ window.onload = function () {
     // 轮播点点击效果
     dot.forEach(function (item, i) {
         item.onmouseenter = function () {
+            if(i===now){
+                return;
+            }
             if (i > now) {
                 page[i].style.left = '180px';
                 animate(page[i], { 'left': 0 });
@@ -200,7 +204,7 @@ window.onload = function () {
                 dot[i].classList.add("active")
                 prev = i;
                 now = i;
-            } else {
+            } else if(i<now){
                 page[i].style.left = '-180px';
                 animate(page[i], { 'left': 0 });
                 animate(page[prev], { 'left': 180 });
@@ -280,7 +284,10 @@ window.onload = function () {
     // 轮播点点击事件
     dot2.forEach(function (item, i) {
         item.onmouseenter = function () {
-            if (i > now) {
+            if(i===now2){
+                return;
+            }
+            if (i > now2) {
                 page2[i].style.left = '350px';
                 animate(page2[i], { 'left': 0 });
                 animate(page2[prev2], { 'left': -350 });
@@ -290,7 +297,7 @@ window.onload = function () {
                 dot2[i].classList.add("active")
                 prev2 = i;
                 now2 = i;
-            } else {
+            } else if(i<now2){
                 page2[i].style.left = '-350px';
                 animate(page2[i], { 'left': 0 });
                 animate(page2[prev2], { 'left': 350 });
@@ -369,7 +376,10 @@ window.onload = function () {
     // 轮播点点击效果
     dot3.forEach(function (item, i) {
         item.onmouseenter = function () {
-            if (i > now) {
+            if(i===now3){
+                return;
+            }
+            if (i > now3) {
                 page3[i].style.left = '350px';
                 animate(page3[i], { 'left': 0 });
                 animate(page3[prev3], { 'left': -350 });
@@ -379,7 +389,7 @@ window.onload = function () {
                 dot3[i].classList.add("active")
                 prev3 = i;
                 now3 = i;
-            } else {
+            } else if(i<now3){
                 page3[i].style.left = '-350px';
                 animate(page3[i], { 'left': 0 });
                 animate(page3[prev3], { 'left': 350 });
@@ -413,6 +423,9 @@ window.onload = function () {
     // 轮播点点击效果
     dot4.forEach(function (item, i) {
         item.onmouseenter = function () {
+            if(i===now4){
+                return;
+            }
             if (i > now4) {
                 page4[i].style.left = '350px';
                 animate(page4[i], { 'left': 0 });
@@ -423,7 +436,7 @@ window.onload = function () {
                 dot4[i].classList.add("active")
                 prev4 = i;
                 now4 = i;
-            } else {
+            } else if(i<now4){
                 page4[i].style.left = '-350px';
                 animate(page4[i], { 'left': 0 });
                 animate(page4[prev4], { 'left': 350 });
@@ -457,6 +470,9 @@ window.onload = function () {
     // 轮播点点击效果
     dot5.forEach(function (item, i) {
         item.onmouseenter = function () {
+            if(i===now5){
+                return;
+            }
             if (i > now5) {
                 page5[i].style.left = '350px';
                 animate(page5[i], { 'left': 0 });
@@ -467,7 +483,7 @@ window.onload = function () {
                 dot5[i].classList.add("active")
                 prev5 = i;
                 now5 = i;
-            } else {
+            } else if(i<now5){
                 page5[i].style.left = '-350px';
                 animate(page5[i], { 'left': 0 });
                 animate(page5[prev5], { 'left': 350 });
@@ -480,63 +496,133 @@ window.onload = function () {
             }
         }
     })
+// 闪购平移轮播
+let pagem = document.querySelectorAll(".sk-list-items")
+let prem = document.querySelector(".seckill-body-list .sk-buttonl") 
+let nextm = document.querySelector(".seckill-body-list .sk-buttonr") 
+let prevm = 0;
+let nowm = 0;
+pagem.forEach(function(item,i){
+    if(i == 0){
+        return;
+    }
+    item.style.left = "800px";
+})
+function runm(status = "next"){
+    if(status == "next"){
+        nowm += 1;
+        if(nowm>2){
+            nowm = 0;
+        }
+        pagem[nowm].style.left = '800px';
+        animate(pagem[nowm],{'left':0});
+        animate(pagem[prevm],{'left':-800});
+    }else if(status == "pre"){
+        nowm -= 1;
+        if(nowm<0){
+            nowm = 2;
+        }
+        pagem[nowm].style.left = '-800px';
+        animate(pagem[nowm],{'left':0});
+        animate(pagem[prevm],{'left':800});
+    }
+    prevm = nowm;
+}
+// 箭头
+prem.onclick = function(){
+    runm("pre")
+}
+nextm.onclick = function(){
+    runm()
+}
 
-
-    // 京东秒杀无缝切换
-    let page6 = document.querySelectorAll(".sk-list-items")
-    let prev6 = 0;
-    let now6 = 0;
-    let pre6 = document.querySelector(".sk-buttonl")
-    let next6 = document.querySelector(".sk-buttonr")
-
-    page6.forEach(function (item, i) {
-        if (i == 0) {
+    // 特色推荐轮播
+    let pag = document.querySelectorAll(".special .special-box .special-bd-slider")
+    let banners = document.querySelector(".special")
+    let dotl = document.querySelectorAll(".special .special-dots .slider-dotr")
+    let sprev = document.querySelector(".special .control-prev")
+    let snext = document.querySelector(".special .control-next")
+    let prevs = 0;
+    let nows = 0;
+    pag.forEach(function(item,i){
+        if(i == 0){
             return;
         }
-        item.style.left = "800px";
+        item.style.left = "1190px";
+    })
+    // 切换
+    function run4(status = 'next'){
+        if(status == "next"){
+            nows += 1;
+            if(nows>3){
+                nows = 0;
+            }
+            pag[nows].style.left = '1190px';
+            animate(pag[nows],{'left':0});
+            animate(pag[prevs],{'left':-1190});
+            dotl.forEach(function(item){
+                item.classList.remove("sdot-active")
+            })
+            dotl[nows].classList.add("sdot-active")
+        }else if(status == "pre"){
+            nows -= 1;
+            if(nows<0){
+                nows = 3;
+            }
+            pag[nows].style.left = '-1190px';
+            animate(pag[nows],{'left':0});
+            animate(pag[prevs],{'left':1190});
+            dotl.forEach(function(item){
+                item.classList.remove("sdot-active")
+            })
+            dotl[nows].classList.add("sdot-active")
+        }
+        prevs = nows;
+    }
+    let s = setInterval(run4,4000);
+    // 左右箭头
+    sprev.onclick = function(){
+        run4("pre")
+    }
+    snext.onclick = function(){
+        run4()
+    }
+    // 移入停止
+    banners.onmouseenter = function(){
+        clearInterval(s)
+    }
+    banners.onmouseleave = function(){
+        s = setInterval(run4,4000)
+    }
+    // 轮播点点击事件
+    dotl.forEach(function(item,i){
+        item.onmouseenter = function(){
+            if(i===nows){
+                return;
+            }
+            if(i>nows){
+                pag[i].style.left = '1190px';
+                animate(pag[i],{'left':0});
+                animate(pag[prevs],{'left':-1190});
+                dotl.forEach(function(item){
+                    item.classList.remove("sdot-active")
+                })
+                dotl[i].classList.add("sdot-active")
+                prevs = i;
+                nows = i;
+            }else if(i<nows){
+                pag[i].style.left = '-1190px';
+                animate(pag[i],{'left':0});
+                animate(pag[prevs],{'left':1190});
+                dotl.forEach(function(item){
+                    item.classList.remove("sdot-active")
+                })
+                dotl[i].classList.add("sdot-active")
+                prevs = i;
+                nows = i;
+            }
+        }
     })
 
-    // 切换
-    // if (status == "next") {
-    //     now6 += 1;
-    //     if (now6 > 4) {
-    //         now6 = 0;
-    //     }
-
-    //     page6[now6].style.left = '800px';
-    //     animate(page6[now6], { 'left': 0 });
-    //     animate(page6[prev6], { 'left': -800 });
-    // } else if (status == "pre") {
-    //     now6 -= 1;
-    //     if (now6 < 0) {
-    //         now6 = 4;
-    //     }
-    //     page6[now6].style.left = '-800px';
-    //     animate(page6[now6], { 'left': 0 });
-    //     animate(page6[prev6], { 'left': 800 });
-    // }
-    // prev6 = now6;
-
-
-//     pre6.onclick = function () {
-//         now6 -= 1;
-//         if (now6 < 0) {
-//             now6 = 4;
-//         }
-//         page6[now6].style.left = '-800px';
-//         animate(page6[now6], { 'left': 0 });
-//         animate(page6[prev6], { 'left': 800 });
-//     }
-//     next6.onclick = function () {
-//         now6 += 1;
-//         if (now6 > 4) {
-//             now6 = 0;
-//         }
-
-//         page6[now6].style.left = '800px';
-//         animate(page6[now6], { 'left': 0 });
-//         animate(page6[prev6], { 'left': -800 });
-//     }
-// prev6=now6
 
 }

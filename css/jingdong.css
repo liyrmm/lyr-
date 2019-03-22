@@ -19,11 +19,13 @@ body{
 	width: 258px;
 	height: 30px;
 	float: left;
+	position: relative;
 }
 .nav-box .body .body-left .body-left-right{
 	float: right;
 	padding-right: 7px;
 	position: relative;
+	z-index: 99;
 }
 .body-left-right i{
 	line-height: 30px;
@@ -34,10 +36,17 @@ body{
 	color: #999999;
 	line-height: 30px;
 }
+.body-left-right:hover{
+	background: #fff;
+	border: 1px solid #ccc;
+	border-bottom: none;
+}
 .bjSlide{
 	padding: 10px;
 	width: 294px;
 	position: absolute;
+	top: 28px;
+	left: 206px;
 	border: 1px solid #ccc;
 	background-color: #fff;
 	box-shadow: 1px 2px 1px rgba(0,0,0,.1);
@@ -63,7 +72,7 @@ display: none;
 	float: right;
 	line-height: 30px;
 	display: flex;
-
+position: relative;
 }
 .body-right-login{
 	font-size: 12px;
@@ -84,12 +93,35 @@ display: none;
 .myjd{
 	box-sizing: border-box;
 }
-/* .myjd:hover{
+.myjd:hover{
 	background: #fff;
 	border: 1px solid #ccc;
 	border-bottom: 2px solid #fff;
-	
-} */
+}
+.company{
+	box-sizing: border-box;
+}
+.company:hover{
+	background: #fff;
+	border: 1px solid #ccc;
+	border-bottom: 2px solid #fff;
+}
+.clientService{
+	box-sizing: border-box;
+}
+.clientService:hover{
+	background: #fff;
+	border: 1px solid #ccc;
+	border-bottom: 2px solid #fff;
+}
+.website{
+	box-sizing: border-box;
+}
+.website:hover{
+	background: #fff;
+	border: 1px solid #ccc;
+	border-bottom: 2px solid #fff;
+}
 .search-scan{
 	position: absolute;
 	top: 31px;
@@ -167,7 +199,7 @@ display: none;
     line-height: 14px;
     color: #F10214;
 }
-.loginSlide1{
+	.loginSlide1{
 	position: absolute;
     border: 1px solid #ccc;
 	background-color: #fff;
@@ -1077,7 +1109,10 @@ top: 50%;
 	font-size: 24px;
 }
 .sk-list{
+	width: 100%;
+	height: 100%;
 	position: absolute;
+	overflow: hidden;
 }
 .sk-list-items{
 	width: 800px;
@@ -1989,6 +2024,7 @@ color: #e33333;
 	margin-top: -20px;
 	position: absolute;
 	top: 50%;
+	z-index: 99;
 }
 .control-prev{
 	left: 0;
@@ -1996,13 +2032,23 @@ color: #e33333;
 .control-next{
 	right: 0;
 }
+.special-box{
+	width: 4760px;
+	height: 340px;
+	overflow: hidden;
+	position: relative;
+}
 .special-bd{
 	width: 100%;
 	height: 385px;
+	overflow: hidden;
 }
 .special-bd-slider{
-	width: 100%;
+	width: 1190px;
 	height: 340px;
+	float: left;
+	position:absolute;
+	left: 0;
 }
 .list-item{
 	width: 390px;
@@ -2089,6 +2135,11 @@ color: #e33333;
 	cursor: pointer;
 }
 .slider-dotr:hover{
+	background: #e33333;
+	border-color: #e33333;
+	box-shadow: 0 0 0 3px #fdd9dd;
+}
+.sdot-active{
 	background: #e33333;
 	border-color: #e33333;
 	box-shadow: 0 0 0 3px #fdd9dd;
